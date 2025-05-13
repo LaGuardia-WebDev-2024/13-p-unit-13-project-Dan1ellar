@@ -1,5 +1,5 @@
-#movie-result {
-  background: rgb(244, 98, 181);
+#color-result {
+  background: rgb(255, 193, 218);
   border: 5px solid black;
   font-size: 24px;
   height: 160px;
@@ -7,8 +7,8 @@
   margin-bottom: 20px;
 }
 
-#book-result {
-  background: rgb(196, 159, 255);
+#city-result {
+  background: rgb(255, 219, 219);
   border: 5px solid black;
   font-size: 24px;
   height: 160px;
@@ -19,4 +19,41 @@
 hr {
   height: 5px;
   background-color: black;
+}
+
+h1 {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+label {
+  font-family: "Shantell Sans", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "BNCE" 0,
+    "INFM" 0,
+    "SPAC" 0;
+}
+
+#paris-pic {
+   border-radius: 30px; border: 5px solid #000000;
+}
+
+#rome-pic {
+        border-radius: 30px; border: 5px solid #000000;
+      }
+#la-pic {
+        border-radius: 30px; border: 5px solid #000000;
+      }
+
+body {
+  background-color: rgb(250, 247, 240);
+}
+
+button {
+   background-color: #FFC6C6;
+  border: rgb(255, 219, 219);
 }
