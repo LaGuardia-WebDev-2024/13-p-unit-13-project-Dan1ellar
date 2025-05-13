@@ -15,6 +15,13 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <head>
     <meta charset="utf-8" />
     <title>Unit 13 Project</title>
@@ -24,63 +31,110 @@ Select ONE Additional Feature to Add
     <h1>Quiz About [Me]</h1>
     <hr />
     <!-- Movie Question -->
-    <form id="movie-form">
+    <form id="color-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+         What is my favorite color?
+        <select id="color-answer">
+          <option value="color1">Green</option>
+          <option value="color2">Blue</option>
+          <option value="color3">Purple</option>
+          <option value="color4">Pink</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Color Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="color-result"></div>
     <hr />
     <!-- Book Question -->
-    <form id="book-form">
+    <form id="city-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        What is my favorite city?
+        <select id="city-answer">
+          <option value="city1">LA</option>
+          <option value="city2">Paris</option>
+          <option value="city3">Rome</option>
+          <option value="city4">Athens</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check City Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="city-result"></div>
+    
+     <img
+      id="paris-pic"
+      src="https://cdn.glitch.global/18c878c7-a30d-47c2-9b9a-0d5f3bceb4a9/paris1.jpeg?v=1728310253701"
+      width="150"
+    />
+    
+     <img
+      id="rome-pic"
+      src="https://i.natgeofe.com/k/a6c9f195-de20-445d-9d36-745ef56042c5/OG_Colosseum_Ancient-Rome_KIDS_1122_square.jpg"
+      width="200"
+    />
+    
+     <img
+      id="la-pic"
+      src="https://media-cdn.tripadvisor.com/media/photo-s/16/ac/f2/53/la-sunsets-hard-to-beat.jpg"
+      width="200"
+    />
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      $("#color-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#color-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "color4") {
+          $("#color-result").text("Yep!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#color-result").text("Try Again!");
         }
       });
 
       //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      $("#city-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#city-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+        if (answer === "city2") {
+          $("#city-result").text("Great job!");
         } else {
-          $("#book-result").text("Try Again!");
+          $("#city-result").text("Try Again!");
         }
       });
+      
+       $("h1").animate(
+        {marginLeft:"20px",
+        fontSize:"3em",},
+        3000
+      )
+      
+       $("label").animate(
+        {marginLeft:"20px",
+        fontSize:"2em",},
+        3000
+      )
+      
+       var $pic = $("#paris-pic");
+      $("#paris-pic").hide();
+      $("#paris-pic").slideDown(1000, function() {
+      });
+      
+        var $pic = $("#rome-pic");
+      $("#rome-pic").hide();
+      $("#rome-pic").slideDown(1000, function() {
+      });
+      
+       var $pic = $("#la-pic");
+      $("#la-pic").hide();
+      $("#la-pic").slideDown(1000, function() {
+      });
+      
     </script>
   </body>
 
